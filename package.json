@@ -12,7 +12,8 @@
     "startCacheless": "yarn start --reset-cache",
     "androidRelease": "react-native run-android --variant=release",
     "react-devtools": "react-devtools",
-    "logAndroid": "npx react-native log-android"
+    "logAndroid": "npx react-native log-android",
+    "backend": "cd backend && yarn && yarn dev"
   },
   "dependencies": {
     "react": "17.0.1",
