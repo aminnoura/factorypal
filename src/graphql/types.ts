@@ -12,9 +12,9 @@ enum CATEGORY_TYPE {
 	downtime = 'downtime'
 }
 
-interface performanceDataType {
+export interface performanceDataType {
 	label: string;
-	value: Number;
+	value: number;
 	description: String;
 	type: VALUE_TYPE;
 	category: CATEGORY_TYPE;
