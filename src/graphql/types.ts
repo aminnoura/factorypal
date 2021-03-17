@@ -1,7 +1,34 @@
-interface LIST_TYPE {
-	name: string;
+enum VALUE_TYPE {
+	percentage = 'percentage',
+	number = 'number',
+	secs = 'sec',
+	minutes = 'minutes',
+	hours = 'hours'
 }
 
-export interface DATA_TYPE {
-	list: [LIST_TYPE];
+enum CATEGORY_TYPE {
+	efficiency = 'efficiency',
+	shift = 'shift',
+	downtime = 'downtime'
+}
+
+interface performanceDataType {
+	label: string;
+	value: Number;
+	description: String;
+	type: VALUE_TYPE;
+	category: CATEGORY_TYPE;
+}
+
+export interface PERFORMANCE_DATA_TYPE {
+	performanceData: [performanceDataType];
+}
+
+type datasetsTypes = {
+	data: Number[]
+}
+
+export type barChartDataTYPE = {
+	labels: string[]
+	datasets: datasetsTypes[]
 }
