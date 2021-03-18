@@ -32,3 +32,8 @@ export type barChartDataTYPE = {
 	labels: string[]
 	datasets: datasetsTypes[]
 }
+
+export type stackedBarChartDataTYPE = {
+	labels: string[]
+	datasets: datasetsTypes[]
+}
