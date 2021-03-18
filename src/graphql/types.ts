@@ -1,3 +1,6 @@
+import { ViewStyle } from "react-native";
+
+
 enum VALUE_TYPE {
 	percentage = 'percentage',
 	number = 'number',
@@ -33,7 +36,41 @@ export type barChartDataTYPE = {
 	datasets: datasetsTypes[]
 }
 
-export type stackedBarChartDataTYPE = {
-	labels: string[]
-	datasets: datasetsTypes[]
+// ChartConfig
+export interface ChartConfig {
+	backgroundColor?: string;
+	backgroundGradientFrom?: string;
+	backgroundGradientFromOpacity?: number;
+	backgroundGradientTo?: string;
+	backgroundGradientToOpacity?: number;
+	fillShadowGradient?: string;
+	fillShadowGradientOpacity?: number;
+	color: (opacity: number, index?: number) => string;
+	labelColor: (opacity: number) => string;
+	strokeWidth?: number;
+	barPercentage?: number;
+	barRadius?: number;
+	propsForBackgroundLines?: object;
+	propsForLabels?: TextProps;
+	decimalPlaces?: number;
+	style?: ViewStyle;
+  }
+
+export interface StackedBarChartData {
+	labels: string[];
+	legend: string[];
+	data: number[][];
+	barColors: string[];
+}
+
+
+interface StackedBarChartProps {
+	data: StackedBarChartData;
+	width: number;
+	height: number;
+	chartConfig: ChartConfig;
+	style?: ViewStyle;
+	barPercentage?: number;
+	hideLegend: boolean;
+	segments?: number;
 }
