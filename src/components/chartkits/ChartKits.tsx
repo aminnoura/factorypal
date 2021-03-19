@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
 import { SafeAreaView, ScrollView, StyleSheet, View } from 'react-native';
-import { StackedBarChartData } from '../../graphql/types';
+import { StackedBarChartDataType } from '../../graphql/types';
 import {StackedBarChart} from "react-native-chart-kit";
 import { colors } from '../../helpers/colors';
 
 type chartKitsPropTypes = {
-	stackedBarChartData: StackedBarChartData[]
+	stackedBarChartData: StackedBarChartDataType[]
 }
 
 const ChartKits:FC<chartKitsPropTypes> = ({stackedBarChartData}) => {
@@ -22,16 +22,16 @@ const ChartKits:FC<chartKitsPropTypes> = ({stackedBarChartData}) => {
 		<SafeAreaView style={styles.safeAreaViewStyle}>
 			<ScrollView contentContainerStyle={styles.scrollViewStyle} contentInsetAdjustmentBehavior="automatic" horizontal={true}>
 				<View style={styles.groupStackBarViewStyle}>
-					{stackedBarChartData.length>0 && stackedBarChartData.map( (stackedBarData, index) =>{
+					{stackedBarChartData && stackedBarChartData.length>0 && stackedBarChartData.map( (stackedBarData, index) =>{
 						return (
 							<StackedBarChart
 								key={index}
 								style={styles.graphStyle}
 								data={stackedBarData}
-								width={200}
+								width={250}
 								height={320}
 								chartConfig={chartConfig}
-								withHorizontalLabels={false}
+								withHorizontalLabels={true}
 								hideLegend={false}
 							/>
 						)

@@ -1,4 +1,4 @@
-import { ViewStyle } from "react-native";
+import { TextProps, ViewStyle } from "react-native";
 
 
 enum VALUE_TYPE {
@@ -32,8 +32,8 @@ type datasetsTypes = {
 }
 
 export type barChartDataTYPE = {
-	labels: string[]
-	datasets: datasetsTypes[]
+	labels: string[];
+	datasets: datasetsTypes[];
 }
 
 // ChartConfig
@@ -56,21 +56,14 @@ export interface ChartConfig {
 	style?: ViewStyle;
   }
 
-export interface StackedBarChartData {
+export interface StackedBarChartDataType {
 	labels: string[];
 	legend: string[];
 	data: number[][];
 	barColors: string[];
 }
 
-
-interface StackedBarChartProps {
-	data: StackedBarChartData;
-	width: number;
-	height: number;
-	chartConfig: ChartConfig;
-	style?: ViewStyle;
-	barPercentage?: number;
-	hideLegend: boolean;
-	segments?: number;
+export interface progressChartData {
+	labels: string[]
+  	data: number[]
 }
