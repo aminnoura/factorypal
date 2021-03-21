@@ -9,7 +9,7 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 
 // Initialize Apollo Client
 const client = new ApolloClient({
-    uri: 'http://192.168.2.113:4000/graphql',
+    uri: 'https://factorypal.herokuapp.com/graphql',
     cache: new InMemoryCache()
 });
 
