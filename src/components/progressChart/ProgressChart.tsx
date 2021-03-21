@@ -11,11 +11,11 @@ type chartKitsPropTypes = {
 const ProgressChartComponent:FC<chartKitsPropTypes> = ({progressData}) => {
 	const chartConfig = {
 		barPercentage: 1,
-		backgroundColor: colors.green3,
-		backgroundGradientFrom: colors.green3,
-		backgroundGradientTo: colors.green3,
-		color: (opacity = 1) => `rgba(20, 20, 110, ${opacity})`,
-		labelColor: (opacity = 1) => `rgba(20, 20, 110, ${opacity})`
+		backgroundColor: colors.chartsBackground,
+		backgroundGradientFrom: colors.chartsBackground,
+		backgroundGradientTo: colors.chartsBackground,
+		color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
+		labelColor: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`
 	}
 
 	return (

@@ -46,7 +46,7 @@ const App: () => ReactElement = () => {
 
 				if (i !== -1) {
 					temp[i].legend.push(pd.label);
-					temp[i].barColors.push( stackBarColors(temp[i].barColors.length+2) );
+					temp[i].barColors.push( stackBarColors(temp[i].barColors.length) );
 					temp[i].data[0].push(pd.value>0?pd.value:-pd.value);
 				} else {
 					temp.push({
@@ -90,11 +90,13 @@ const styles = StyleSheet.create({
 		backgroundColor: "#222",
 		width: Dimensions.get('window').width,
 		height: Dimensions.get('window').height,
+		alignItems: 'center'
 	},
 	scrollViewStyle: {
 		display: "flex",
 		justifyContent: "center",
 		alignItems: "center",
+		width: Dimensions.get('window').width-20,
 	},
 	topChartStyle: {
 		display: 'flex',
@@ -105,8 +107,8 @@ const styles = StyleSheet.create({
 		fontSize: 24,
 		color: colors.white,
 		textAlign: 'center',
-		marginTop: 20,
-		marginBottom: 4,
+		marginTop: 30,
+		marginBottom: 12,
 	},
 	descriptionText: {
 		fontSize: 18,

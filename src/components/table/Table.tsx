@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
 		width: Dimensions.get('window').width,
 		marginBottom: 40,
 		marginTop: 10,
-		backgroundColor: colors.green3,
+		backgroundColor: colors.chartsBackground,
 		padding: 8,
 	},
 	headers: {
@@ -43,12 +43,13 @@ const styles = StyleSheet.create({
 		flexDirection: 'column',
 		justifyContent: 'center',
 		alignItems: 'center',
-		borderColor: 'blue',
+		borderColor: colors.tableBorder,
 		borderWidth: 1,
 		padding: 8,
 		width: Dimensions.get('window').width/5.2,
 		textAlign: 'center',
-		fontSize: 9
+		fontSize: 9,
+		color: colors.tableCellColor
 	}
 })
 

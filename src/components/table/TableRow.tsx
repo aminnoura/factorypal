@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import { Dimensions, Text, StyleSheet, View } from 'react-native';
 import { performanceDataType } from '../../graphql/types';
+import { colors } from '../../helpers/colors';
 
 type rowPropTypes = {
 	rowData: performanceDataType
@@ -29,15 +30,16 @@ const styles = StyleSheet.create({
 		flexDirection: 'column',
 		justifyContent: 'center',
 		alignItems: 'center',
-		borderColor: 'blue',
+		borderColor: colors.tableBorder,
 		borderWidth: 1,
 		padding: 8,
 		width: Dimensions.get('window').width/5.2,
 		textAlign: 'center',
-		fontSize: 9
+		fontSize: 9,
+		color: colors.tableCellColor
 	},
 	active: {
-		backgroundColor: 'red'
+		backgroundColor: colors.tableHighlightetBackground
 	}
 })
 

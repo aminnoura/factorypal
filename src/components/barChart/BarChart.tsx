@@ -11,13 +11,13 @@ type chartKitsPropTypes = {
 const BarChartComponent:FC<chartKitsPropTypes> = ({efficiencyChartData}) => {
 	const chartConfig = {
 		barPercentage: 1,
-		backgroundColor: colors.green3,
-		backgroundGradientFrom: colors.green3,
-		backgroundGradientTo: colors.green3,
-		color: (opacity = 1) => `rgba(20, 20, 50, ${opacity})`,
-		labelColor: (opacity = 1) => `rgba(20, 20, 50, ${opacity})`,
-		showBarTops: true,
-		withInnerLines: true,
+		backgroundColor: colors.chartsBackground,
+		backgroundGradientFrom: colors.chartsBackground,
+		backgroundGradientTo: colors.chartsBackground,
+		color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
+		labelColor: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
+		showBarTops: false,
+		withInnerLines: false,
 	}
 
 	return (

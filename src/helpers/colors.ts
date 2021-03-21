@@ -4,9 +4,17 @@ export const colors = {
     green3: "#30ff30",
     blue: "#3030ff",
     white: '#FFFFFF',
-    gray: '#EEEEEE'
+    gray: '#EEEEEE',
+    chartsBackground: '#0060ff',
+    tableCellColor: '#FFF',
+    tableBorder: '#999',
+    tableHighlightetBackground: '#777'
 }
 
+const clrs = [
+    '#CCC','#999','#777','#555','#333'
+]
+
 export const stackBarColors = (index:number) => {
-    return `rgba(${index*30<250?index*30:250}, 120,130,1)`
+    return clrs[index];
 }
