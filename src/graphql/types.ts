@@ -28,7 +28,7 @@ export interface PERFORMANCE_DATA_TYPE {
 }
 
 type datasetsTypes = {
-	data: Number[]
+	data: number[];
 }
 
 export type barChartDataTYPE = {
@@ -57,13 +57,24 @@ export interface ChartConfig {
   }
 
 export interface StackedBarChartDataType {
+	category: string;
+	type: string;
 	labels: string[];
 	legend: string[];
 	data: number[][];
 	barColors: string[];
 }
 
-export interface progressChartData {
-	labels: string[]
-  	data: number[]
+export interface progressChartDataType {
+	labels: string[];
+  	data: number[];
+}
+
+type efficiencyChartDatasetType = {
+	data: number[];
+}
+
+export interface efficiencyChartDataType {
+	labels: string[];
+	datasets: efficiencyChartDatasetType[];
 }
