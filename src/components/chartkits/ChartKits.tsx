@@ -12,9 +12,9 @@ type chartKitsPropTypes = {
 const ChartKits:FC<chartKitsPropTypes> = ({stackedBarChartData, setActiveCategory}) => {
 	const chartConfig = {
 		barPercentage: 1.3,
-		backgroundColor: colors.green2,
-		backgroundGradientFrom: colors.green2,
-		backgroundGradientTo: colors.green2,
+		backgroundColor: colors.green3,
+		backgroundGradientFrom: colors.green3,
+		backgroundGradientTo: colors.green3,
 		color: (opacity = 1) => `rgba(20, 20, 110, ${opacity})`,
 		labelColor: (opacity = 1) => `rgba(20, 20, 110, ${opacity})`
 	}
