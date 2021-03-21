@@ -1,6 +1,9 @@
 # FactoryPal Assignment
 This is an assignment for job application in [FactoryPal](https://factorypal.com/)
 
+## Download the Android app
+Go to [Github activity page](https://github.com/aminnoura/factorypal/actions) and then find the latest release. The release automatically build by every push into master branch. 
+
 
 ## What is it all about...
 This is to display some charts based on the received data from backend (which is node.js here and work with graphQL). 
@@ -31,12 +34,6 @@ yarn backend
 and finally make the app with:
 ```
 npm run android
-```
-
-### backend address
-Please note that you have the change the backend address in the main index.js file. Current value is:
-```
-http://192.168.2.113:4000/graphql
 ```
 
 # Android 
