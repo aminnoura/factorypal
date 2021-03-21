@@ -1,23 +1,22 @@
 import React, { FC } from 'react';
 import { Dimensions, View, StyleSheet } from 'react-native';
-import { progressChartData } from '../../graphql/types';
+import { progressChartDataType } from '../../graphql/types';
 import {ProgressChart} from "react-native-chart-kit";
 import { colors } from '../../helpers/colors';
 
 type chartKitsPropTypes = {
-	progressData: progressChartData
+	progressData: progressChartDataType
 }
 
 const ProgressChartComponent:FC<chartKitsPropTypes> = ({progressData}) => {
 	const chartConfig = {
 		barPercentage: 1,
-		backgroundColor: colors.green1,
-		backgroundGradientFrom: colors.green1,
-		backgroundGradientTo: colors.green1,
+		backgroundColor: colors.green3,
+		backgroundGradientFrom: colors.green3,
+		backgroundGradientTo: colors.green3,
 		color: (opacity = 1) => `rgba(20, 20, 110, ${opacity})`,
 		labelColor: (opacity = 1) => `rgba(20, 20, 110, ${opacity})`
 	}
-	console.log(progressData)
 
 	return (
 		<View style={styles.progressBarTopView}>
