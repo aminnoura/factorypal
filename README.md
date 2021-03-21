@@ -42,6 +42,10 @@ http://192.168.2.113:4000/graphql
 # Android 
 Please notice that currently this is only available on android as I don't have a mac device and also time was limited to find an online solution to handle the release of ios version. 
 
+# Test
+There is no test at the moment in this repo.
+
+
 # UI/UX Design
 There was no UI/UX design for this task and due to time limitation I did not spend time to design. Absolutely the colors, margins, paddings and a lot of other things must improve based on a design from an expert designer.
 
