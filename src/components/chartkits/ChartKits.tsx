@@ -25,9 +25,8 @@ const ChartKits:FC<chartKitsPropTypes> = ({stackedBarChartData, setActiveCategor
 				<View style={styles.groupStackBarViewStyle}>
 					{stackedBarChartData && stackedBarChartData.length>0 && stackedBarChartData.map( (stackedBarData, index) =>{
 						return (
-							<TouchableOpacity onPress={()=>setActiveCategory(stackedBarData.category)}>
+							<TouchableOpacity activeOpacity={1} key={index} onPress={()=>setActiveCategory(stackedBarData.category)}>
 								<StackedBarChart
-									key={index}
 									style={styles.graphStyle}
 									data={stackedBarData}
 									width={250}
