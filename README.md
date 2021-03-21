@@ -46,5 +46,9 @@ Please notice that currently this is only available on android as I don't have a
 There was no UI/UX design for this task and due to time limitation I did not spend time to design. Absolutely the colors, margins, paddings and a lot of other things must improve based on a design from an expert designer.
 
 # Few Screenshot 
-![Application screenshot](https://github.com/[aminnoura]/[factorypal]/screenshots/[master]/1.png?raw=true)
+![Application screenshot](https://github.com/aminnoura/factorypal/blob/master/screenshots/1.png?raw=true)
+
+![Application screenshot](https://github.com/aminnoura/factorypal/blob/master/screenshots/2.png?raw=true)
+
+![Application screenshot](https://github.com/aminnoura/factorypal/blob/master/screenshots/3.png?raw=true)
 
