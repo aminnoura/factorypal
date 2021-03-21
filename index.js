@@ -1,22 +1,10 @@
-/**
- * @format
- */
- import React from 'react';
-import {AppRegistry} from 'react-native';
-import Application from './src/App';
-import {name as appName} from './app.json';
-import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+const { ApolloServer} = require('apollo-server');
+const schema = require("./data/schema");
 
-// Initialize Apollo Client
-const client = new ApolloClient({
-    uri: 'http://192.168.2.113:4000/graphql',
-    cache: new InMemoryCache()
+const server = new ApolloServer({
+    schema
 });
 
-const App = () => (
-    <ApolloProvider client={client}>
-        <Application />
-    </ApolloProvider>
-);
-
-AppRegistry.registerComponent(appName, () => App);
+server.listen().then(({ url }) => {
+    console.log(`🚀  Server ready at ${url}`);
+});
