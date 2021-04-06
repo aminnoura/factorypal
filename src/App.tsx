@@ -40,13 +40,13 @@ const App: () => ReactElement = () => {
 	// after receiving data from backend, the data should be devided based on the chart input displayed
 	useEffect( ()=>{
 		if (data && data.performanceData) {
-			let {performanceData} = data;
-			let tempStacked:StackedBarChartDataType[] =[];
-			let tempProgress: progressChartDataType = {
+			const {performanceData} = data;
+			const tempStacked:StackedBarChartDataType[] =[];
+			const tempProgress: progressChartDataType = {
 				labels: [],
 				data: []
 			};
-			let tempEfficiency: efficiencyChartDataType = {
+			const tempEfficiency: efficiencyChartDataType = {
 				labels: [],
 				datasets: [
 					{
@@ -74,7 +74,7 @@ const App: () => ReactElement = () => {
 				// even if I force to do this, I will handle it inside redux and will not do it here
 				// but in this case as it is a small app, I did not add redux at all. 
 				
-				let i = tempStacked.findIndex(x=> x.category===pd.category && x.type===pd.type );
+				const i = tempStacked.findIndex(x=> x.category===pd.category && x.type===pd.type );
 
 				if (i !== -1) {
 					tempStacked[i].legend.push(pd.label);
